@@ -1,0 +1,213 @@
+/*  =============================================
+
+	$ 	GRID CALCULATOR
+	---------------------------------------------
+	* 	FOR CALCULATING EQUAL COLUMN SIZES
+	* 	@MATTHEWBETA
+
+	==============================================  */
+
+	@mixin cols($size, $number) {
+		
+		@if type-of($number) == number {
+
+			// removes % 
+			$gutter: $grid-gutter / ($grid-gutter * 0 + 1); 
+
+	  		width: 100% / ($size / $number) - $gutter ;
+
+		} @else {
+
+			@warn "Not a number value: #{$number}";
+		}
+	}
+
+	// USAGE
+
+	/* 
+		.one-twelth {
+			@include cols(1, 12);
+		}
+
+	*/
+
+	// OFFSET - PUSHES COL TO RIGHT BY COL WIDTH(S)
+	@mixin offset($size, $number) {
+
+		@if type-of($number) == number {
+
+			// removes % 
+			$gutter: $grid-gutter / ($grid-gutter * 0 + 1); 
+
+	 		margin-left: 100% / ($size / $number) + $gutter ;
+
+		} @else {
+
+			@warn "Not a number value: #{$number}";
+		}
+	}
+
+
+	// USAGE
+
+	/* 
+		.push-one-twelth {
+			@include offset(1, 12);
+		}
+
+	*/
+
+	/* =============================================
+
+	  > SMALL
+
+	==============================================*/
+
+	@for $i from 1 through ($grid-units-sml - 1){
+
+		@if $ghost-grids {
+
+		    %s-#{$i} {
+		        @include cols($grid-units-sml, $i);
+		    }
+	    	
+		} 
+		@else {
+
+		    .s-#{$i} {
+	        	@include cols($grid-units-sml, $i);
+	    	}
+			
+		}
+
+
+	}
+
+	/* =============================================
+
+	  > OFFSET SML
+
+	==============================================*/
+	
+	@for $i from 1 through ($grid-units-sml - 1){
+
+		@if $ghost-grids {
+
+		    %s-push-#{$i} {
+		        @include offset($grid-units-sml, $i)
+			}
+		
+		}
+
+		@else {
+
+			.s-push-#{$i} {
+		        @include offset($grid-units-sml, $i)
+			}
+			
+		}
+	}
+
+	/* =============================================
+
+	  > MED
+
+	==============================================*/
+	
+	@include mq(m) {
+
+		@for $i from 1 through ($grid-units-med - 1){
+
+			@if $ghost-grids { 
+
+			    %m-#{$i} {
+			        @include cols($grid-units-med, $i);
+			    }
+
+			}
+			@else {
+
+			    .m-#{$i} {
+			        @include cols($grid-units-med, $i);
+			    }
+				
+			}
+		}
+
+	/* =============================================
+
+	  > OFFSET MED
+
+	==============================================*/
+		
+		@for $i from 1 through ($grid-units-med - 1){
+
+			@if $ghost-grids {  			
+		    
+			    %m-push-#{$i} {
+			        @include offset($grid-units-med, $i)
+				}
+
+			}
+			@else {
+
+				.m-push-#{$i} {
+			        @include offset($grid-units-med, $i)
+				}
+				
+			}
+		}
+	
+	}
+	// MQ ENDS
+
+	/* =============================================
+
+	  > WIDE
+
+	==============================================*/
+
+	@include mq(w) { 
+
+		@for $i from 1 through ($grid-units-wide - 1){
+			 
+			 @if $ghost-grids { 
+
+			    %w-#{$i} {
+			        @include cols($grid-units-wide, $i);
+			    }
+			}
+			@else {
+				
+			    .w-#{$i} {
+			        @include cols($grid-units-wide, $i);
+			    }
+
+			}
+
+		}
+
+	/* =============================================
+
+	  > OFFSET WIDE
+
+	==============================================*/
+		
+		@for $i from 1 through ($grid-units-wide - 1){
+		    @if $ghost-grids {  			
+		    
+			    %w-push-#{$i} {
+			        @include offset($grid-units-wide, $i)
+				}
+
+			}
+			@else {
+
+				.w-push-#{$i} {
+			        @include offset($grid-units-wide, $i)
+				}
+				
+			}
+		}
+
+	}
