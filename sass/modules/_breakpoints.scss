@@ -1,13 +1,13 @@
 
 /*  =============================================
 
-	$ 	MEDIA QUERIES MIXIN
-	---------------------------------------------
-	* 	EASILY ADD MEDIA QUERIES 
-	* 	version of http://css-tricks.com/naming-media-queries
-	* 	by @chriscoyier
-
-	==============================================  */
+//	$ 	MEDIA QUERIES MIXIN
+//	---------------------------------------------
+//	* 	EASILY ADD MEDIA QUERIES 
+//	* 	version of http://css-tricks.com/naming-media-queries
+//	* 	by @chriscoyier
+//
+//	==============================================  */
 
 	@mixin mq($bp) {
 
@@ -36,14 +36,11 @@
 
 	// USAGE 
 
-	/* 
-		.my-rule {
-			// small screen styles here...
-
-			@include mq(w) {
-				// wide screen styles here...
-			}
-
-		}
-
-	*/
+	// .my-rule {
+	//		small screen styles here...
+	//
+	//		@include mq(w) {
+	//			wide screen styles here...
+	//		}
+    //
+	//	}
