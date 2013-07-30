@@ -100,3 +100,14 @@ These don't have to be your overall breakpoints (although they probably will be)
     $bp-xw : 100em;
     
     
+## To do
+
+- The grid generators aren't too DRY so I wanna redo those. 
+- I need to add some config to be able to use padding as a gutter instead of the margin. I don't support IE7 anyway (the grids won't work even with a mediaQ polyfill. I don't even care. I might fix it)
+
+## Thanks
+
+This is basically a configurable version of the Bootstrap scaffolding (although maybe that is configurable) and also to innuit.css. Thanks.
+
+## Disclaimer 
+Mostly this is an experiment for me to try out some intermediate Sass stuff and for use in my personal projects, mostly. I may update it. I may not. Its provided as is. If it breaks your Boss's computer, you never even heard of me, ok? 
