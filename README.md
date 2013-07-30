@@ -13,13 +13,19 @@ Out of the box, you can have a sweet, mobile first repsonsive grid. Below is a q
     <!-- Your grid row -->
     <div class="grid">
     
-      <div class="grid__unit c-8-12 main" role="main">
+      <!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+      <!-- "laptop" screen = 5/6 --> 
+      <!-- "desktop" screen = 3/4 --> 
+      <div class="grid__unit m-5-6 w-8-12 main" role="main">
       
         <!-- Your awesome important content goes here -->
       
       </div>
       
-      <div class="grid__unit c-4-12 sidebar">
+      <!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+      <!-- "laptop" screen = 1/6 --> 
+      <!-- "desktop" screen = 1/4 -->
+      <div class="grid__unit m-1-6 w-4-12 sidebar">
         
         <!-- Your sidebar crap goes here -->
         
