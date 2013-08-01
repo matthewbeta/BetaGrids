@@ -1,5 +1,131 @@
 ---
 layout: default
-title: BetaGrids
+title: Anatomi
 ---
+<header class="header header--main" role="banner">
+
+	<h1 class="typo__heading--main">Anatomi</h1>
+	<p class="typo__subhead">A configurable, equal width, SCSS grid generator</p>
+
+	<nav id="navMain" class="nav--main" role="navigation">
+		<!--  -->
+	</nav>
+	
+</header>
+
+<section id="main" class="main" role="main">
+
+	<h2 class="typo__heading--section">What's that?</h2>
+
+	<p>Anatomi is another grid generator for building grid systems. Using it is fairly straightforward, just add your own values to the <code>sass/modules/_config.scss</code> and recompile the styles.scss.</p>
+
+	<h2 class="typo__heading--section">Usage</h2> 
+
+	<p>Out of the box, you can have a sweet, mobile first repsonsive grid. Below is a quick example of a standard main column and a sidebar layout:</p>
+
+	<h3 class="typo__heading--code">Your HTML</h3>
+
+	<pre class="code code--html">
+		
+	    <!-- Your grid row -->
+	    <div class="grid">
+	    
+	      <!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+	      <!-- "laptop" screen = 5/6 --> 
+	      <!-- "desktop" screen = 3/4 --> 
+	      <div class="grid__unit m-5-6 w-8-12 main" role="main">
+	      
+	        <!-- Your awesome important content goes here -->
+	      
+	      </div>
+	      
+	      <!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+	      <!-- "laptop" screen = 1/6 --> 
+	      <!-- "desktop" screen = 1/4 -->
+	      <div class="grid__unit m-1-6 w-4-12 sidebar">
+	        
+	        <!-- Your sidebar crap goes here -->
+	        
+	      </div>
+	    
+	    </div>
+	    <!-- / row ends -->  
+
+	</pre>
+
+<h2 class="typo__heading--section">OK, but what can I configure</h2>
+
+<h3 class="typo__heading--sub">Ghost Grids Usage</h3>
+
+<p>This will enable the use of Sass' silent classes. This basically means you can have all the sexy grid-ness without all the dirty class names in your HTML. Mr <a href="http://twitter.com/csswizardry">CSS Wizardry</a> can <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">explain this</a> much better than me</p>
+
+<h4 class="typo__heading--code">Sass</h4>
+	
+	<pre class="code code--scss"> 
+    $ghost-grids : true; //default = false
+
+    .wrap {
+      @extend %grid;
+    }
+    .sidebar {
+      @extend %grid__unit;
+      @extend %w-3-12;
+    }
+	</pre>
+
+<h4 class="typo__heading--code">Compiled CSS</h4>
+	
+	<pre class="code code--css">
+    .wrap {
+      width: 102.5%;
+      margin-left: -2.5%
+    }
+    .sidebar {
+      float: left;
+      margin-left: 2.5%;
+      width: 22.5%;
+    }
+    </pre>
+    
+<h3 class="typo__heading--sub">Column Counts</h3>
+
+<p>These will set the number of available columns at various breakpoints (set up below)</p>
+ 
+ 	<pre class="code code--scss">  
+    // Standard (eg: no media qs)
+    $grid-units-sml  : 1;   // default 4
+    
+    // First breakpoint to second breakpoint
+    $grid-units-med  : 5;   // default 6
+    
+    // Second BP to third
+    $grid-units-wide : 9;   // default 12
+	</pre>
+
+<h3 class="typo__heading--sub">Grid Gutter</h3>
+    
+<p>Sets the gutter width. This needs to be a percentage. You can make it 0% and use padding instead though (config coming soon)</p>
+
+	<pre class="code code--scss">
+	$grid-gutter : 3%;      // default 2.5%
+	</pre>
+
+<h3 class="typo__heading--sub">Breakpoints</h3>
+
+<p>These don't have to be your overall breakpoints (although they probably will be). Just breakpoints for your columns.  </p>
+
+	<pre class="code code--scss">
+		
+	    // Handheld (but bigger than a phone)
+	    $bp-s : 40em;
+	    // Lap
+	    $bp-m : 50em;
+	    // Desk
+	    $bp-w : 60em;
+	    // Jumbotron (What is the media query support for those..?)
+	    $bp-xw : 100em;
+
+	</pre>
+    
+</section>
 

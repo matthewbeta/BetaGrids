@@ -1,5 +1,40 @@
 /*  =============================================
 
+//	$ 	MEDIA QUERIES MIXIN
+//	---------------------------------------------
+//	* 	EASILY ADD MEDIA QUERIES 
+//	* 	version of http://css-tricks.com/naming-media-queries
+//	* 	by @chriscoyier
+//
+//	==============================================  */
+
+	@mixin mq($bp) {
+
+		@if $bp == s {
+			@media only screen and (min-width: $bp-s) and (max-width: $bp-m - 0.0625){ 		
+				@content; 
+			}
+		}
+		@else if $bp == m {
+			@media only screen and (min-width: $bp-m) and (max-width: $bp-w - 0.0625){ 		
+				@content; 
+			}
+		}
+		@else if $bp == w {
+			@media only screen and (min-width: $bp-w) and (max-width: $bp-xw - 0.0625){ 			
+				@content; 
+			}
+		}
+		@else if $bp == xw {
+			@media only screen and (min-width: $bp-xw) { 	
+				@content; 
+			}
+		}
+
+	}
+
+	/*  =============================================
+
 	$ 	GRID MODULE
 	---------------------------------------------
 	* 	SET UP THE GRID AND THE GRID UNITS
