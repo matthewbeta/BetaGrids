@@ -1,14 +1,7 @@
-
-@import "modules/_defaults.scss";
-
-@import "modules/_config.scss";
-
-@import "modules/_defaults.scss";
-
 @import "modules/_normalize.scss";
 
-@import "modules/_anatomi.scss";
+@import "anatomi/_config.scss";
 
-@import "modules/_base.scss";
+@import "anatomi/_anatomi.scss";
 
 @import "modules/_github-pygments.scss";
