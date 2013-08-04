@@ -1,4 +1,6 @@
-# BetaGrids
+# ANATOMI
+
+## PROJECT PAGES COMING SOON 
 
 ## A configurable, equal width, SCSS grid generator
 
