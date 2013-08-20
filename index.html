@@ -16,6 +16,8 @@ title: Anatomi
 
 <article class="content">
 
+<h2>What's that?</h2>
+
 <p>This is another grid generator for building grid systems. Using it is fairly straigfhtforward, just add your own values to the </p><pre>sass/modules/_config.scss</pre> and recompile the styles.scss.
 
 <h2>Usage</h2>
@@ -26,13 +28,13 @@ title: Anatomi
 
 <pre>
 <code>
-&lt;!-- Your grid row --&gt;
-&lt;div class="grid"&gt;
+&lt;!-- Your cell --&gt;
+&lt;div class="cell"&gt;
 
 	&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
 	&lt;!-- "laptop" screen = 5/6 --&gt; 
 	&lt;!-- "desktop" screen = 3/4 --&gt; 
-	&lt;div class="grid__unit m-5-6 w-8-12 main" role="main"&gt;
+	&lt;div class="cell__unit beta-5-6 gamma-8-12 main" role="main"&gt;
 
 		&lt;!-- Your awesome important content goes here --&gt;
 
@@ -41,7 +43,7 @@ title: Anatomi
 	&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
 	&lt;!-- "laptop" screen = 1/6 --&gt; 
 	&lt;!-- "desktop" screen = 1/4 --&gt;
-	&lt;div class="grid__unit m-1-6 w-4-12 sidebar"&gt;
+	&lt;div class="cell__unit beta-1-6 gamma-4-12 sidebar"&gt;
 
 		&lt;!-- Your sidebar crap goes here --&gt;
 
@@ -54,12 +56,12 @@ title: Anatomi
 
 <div class="example">
 	<!-- Your grid row -->
-<div class="grid">
+<div class="cell">
 
 	<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
 	<!-- "laptop" screen = 5/6 --> 
 	<!-- "desktop" screen = 3/4 --> 
-	<div class="grid__unit m-5-6 w-8-12 main" role="main">
+	<div class="cell__unit beta-5-6 gamma-8-12 main" role="main">
 
 		<p>Your awesome important content goes here</p>
 
@@ -68,7 +70,7 @@ title: Anatomi
 	<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
 	<!-- "laptop" screen = 1/6 --> 
 	<!-- "desktop" screen = 1/4 -->
-	<div class="grid__unit m-1-6 w-4-12 sidebar">
+	<div class="cell__unit beta-1-6 gamma-4-12 sidebar">
 
 		<p>Your sidebar crap goes here</p>
 
@@ -92,11 +94,11 @@ Mr <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">
 $ghost-grids : true; //default = false
 
 .wrap {
-	@extend %grid;
+	@extend %cell;
 }
 .sidebar {
-	@extend %grid__unit;
-	@extend %w-3-12;
+	@extend %cell_unit;
+	@extend %gamma-3-12;
 }
 </code>
 </pre>
@@ -121,20 +123,20 @@ $ghost-grids : true; //default = false
 
 <pre><code>
 // Standard (eg: no media qs)
-$grid-units-sml  : 1;   // default 4
+$cell-units-alpha  : 1;   // default 4
 
 // First breakpoint to second breakpoint
-$grid-units-med  : 5;   // default 6
+$cell-units-beta  : 5;   // default 6
 
 // Second BP to third
-$grid-units-wide : 9;   // default 12
+$cell-units-gamma : 9;   // default 12
 </code></pre>
 
 <h3>Grid Gutter</h3>
 
 <p>Sets the gutter width. This needs to be a percentage. You can make it 0% and use padding instead though (config coming soon)</p>
 
-<pre><code>$grid-gutter : 3%;      // default 2.5%
+<pre><code>$cell-gutter : 3%;      // default 2.5%
 </code></pre>
 
 <h3>breakpoints</h3>
@@ -142,13 +144,11 @@ $grid-units-wide : 9;   // default 12
 <p>These don't have to be your overall breakpoints (although they probably will be). Just breakpoints for your columns.  </p>
 
 <pre><code>// Handheld (but bigger than a phone)
-$bp-s : 40em;
+$bp-alpha : 40em;
 // Lap
-$bp-m : 50em;
+$bp-beta : 50em;
 // Desk
-$bp-w : 60em;
-// Jumbotron (What is the media query support for those..?)
-$bp-xw : 100em;
+$bp-gamma : 60em;
 </code></pre>
 
 <h2>To do</h2>

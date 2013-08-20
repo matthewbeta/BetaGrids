@@ -13,13 +13,15 @@
 $strict-normalize: true !default;
 
 // The default font family.
-$base-font-family: sans-serif !default;
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic);
+
+$base-font-family: 'Lekton', sans-serif !default;
 
 // The base font size.
-$base-font-size: 16px !default; // Override default set in Compass' Vertical Rhythm partial.
+$base-font-size: 18px !default; // Override default set in Compass' Vertical Rhythm partial.
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height: 24px !default; // Override default set in Compass' Vertical Rhythm partial.
+$base-line-height: 27px !default; // Override default set in Compass' Vertical Rhythm partial.
 
 // The font sizes for h1-h6.
 $h1-font-size: 2    * $base-font-size !default;
