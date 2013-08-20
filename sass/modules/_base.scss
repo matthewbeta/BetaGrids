@@ -3,7 +3,11 @@ $color--primary : #0DFFD8!default;
 
 body {
 	background-color: $color--primary;
-	color: $color--text;
+	color: $color--text;	
+	font-size: 1.2em;
+}
+.wrap {
+	border-top : 2em solid #333;
 }
 .content--main {
 	padding: 2em 0;
@@ -18,13 +22,13 @@ body {
 .header--main {
 	@extend .content;
 	text-align: center;
-	padding: 1em 0;
+	padding: 2em 0 0;
 }
 pre {
 	padding: 2em;
 	color: $color--primary;
 	border-radius: 1em;
-	background-color: #000;
+	background-color: $color--text;
 }
 .example {
 	border: 2px solid $color--primary;
