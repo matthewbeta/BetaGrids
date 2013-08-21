@@ -719,6 +719,55 @@ pre {
   color: #333333;
 }
 
+/*Ribbon - https://github.com/simonwhitaker/github-fork-ribbon-css/ */
+/* line 75, ../sass/modules/_base.scss */
+.github-fork-ribbon {
+  position: absolute;
+  padding: 2px 0;
+  background-color: #FFF;
+  z-index: 9999;
+}
+
+/* line 82, ../sass/modules/_base.scss */
+.github-fork-ribbon a,
+.github-fork-ribbon a:hover {
+  font-size: .8em;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  line-height: 20px;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+/* line 94, ../sass/modules/_base.scss */
+.github-fork-ribbon-wrapper {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: 9999;
+}
+
+/* line 103, ../sass/modules/_base.scss */
+.github-fork-ribbon-wrapper.right {
+  right: 0;
+}
+
+/* line 107, ../sass/modules/_base.scss */
+.github-fork-ribbon-wrapper.right .github-fork-ribbon {
+  top: 42px;
+  right: -43px;
+  /* Rotate the banner 45 degrees */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 /* line 1, ../sass/modules/_github-pygments.scss */
 .highlight {
   position: relative;

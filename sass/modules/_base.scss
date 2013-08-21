@@ -69,3 +69,48 @@ pre {
 		}
 	}
 }
+
+
+/*Ribbon - https://github.com/simonwhitaker/github-fork-ribbon-css/ */
+.github-fork-ribbon {
+  position: absolute;
+  padding: 2px 0;
+  background-color: #FFF;
+  z-index: 9999;
+}
+.github-fork-ribbon a,
+.github-fork-ribbon a:hover {
+  font-size: .8em;
+  font-weight: 600;
+  color: $color--text;
+ text-decoration: none;
+  text-align: center;
+  width: 200px;
+  line-height: 20px;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.github-fork-ribbon-wrapper {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: 9999;
+}
+
+.github-fork-ribbon-wrapper.right {
+  right: 0;
+}
+
+.github-fork-ribbon-wrapper.right .github-fork-ribbon {
+  top: 42px;
+  right: -43px;
+
+  /* Rotate the banner 45 degrees */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
