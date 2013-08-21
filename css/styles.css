@@ -645,33 +645,34 @@ body {
 /* line 10, ../sass/modules/_base.scss */
 .wrap {
   border-top: 2em solid #333;
+  padding: 0 1em;
 }
 
-/* line 13, ../sass/modules/_base.scss */
+/* line 14, ../sass/modules/_base.scss */
 .content--main {
   padding: 0 0 2em;
 }
 
-/* line 16, ../sass/modules/_base.scss */
+/* line 17, ../sass/modules/_base.scss */
 .content, .header--main {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 20, ../sass/modules/_base.scss */
+/* line 21, ../sass/modules/_base.scss */
 .main-image {
   display: block;
   max-width: 250px;
   margin: 0 auto;
 }
 
-/* line 25, ../sass/modules/_base.scss */
+/* line 26, ../sass/modules/_base.scss */
 .header--main {
   padding: 2em 0 0;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 31, ../sass/modules/_base.scss */
+/* line 32, ../sass/modules/_base.scss */
 pre {
   padding: 2em;
   color: #0dffd8;
@@ -680,23 +681,23 @@ pre {
   border: 1px solid #FFF;
 }
 
-/* line 38, ../sass/modules/_base.scss */
+/* line 39, ../sass/modules/_base.scss */
 .example {
   border: 2px solid #0dffd8;
 }
 
-/* line 41, ../sass/modules/_base.scss */
+/* line 42, ../sass/modules/_base.scss */
 .footer--main {
   padding: 2em 0;
   border-top: 1px solid #fff;
 }
-/* line 44, ../sass/modules/_base.scss */
+/* line 45, ../sass/modules/_base.scss */
 .footer--main p {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 50, ../sass/modules/_base.scss */
+/* line 51, ../sass/modules/_base.scss */
 .code-header {
   padding-top: .5em;
   margin-bottom: 0;
@@ -704,7 +705,7 @@ pre {
   border-top: 1px solid #fff;
 }
 
-/* line 58, ../sass/modules/_base.scss */
+/* line 59, ../sass/modules/_base.scss */
 .grid-demo .cell__unit {
   min-height: 1em;
   background: #333333;
@@ -712,7 +713,7 @@ pre {
   text-align: center;
   color: #FFF;
 }
-/* line 65, ../sass/modules/_base.scss */
+/* line 66, ../sass/modules/_base.scss */
 .grid-demo .cell__unit .cell__unit {
   background: #FFF;
   color: #333333;
