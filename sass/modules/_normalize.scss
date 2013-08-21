@@ -11,9 +11,16 @@
 
 // Set this to true to force CSS output to exactly match normalize.css.
 $strict-normalize: true !default;
+@-ms-viewport{
+    width: device-width;
+}
+@viewport{
+    width: device-width;
 
 // The default font family.
 @import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic);
+
+}
 
 $base-font-family: 'Lekton', sans-serif !default;
 

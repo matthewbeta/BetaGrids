@@ -31,23 +31,23 @@ title: Anatomi
 &lt;!-- Your cell --&gt;
 &lt;div class="cell"&gt;
 
-	&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
-	&lt;!-- "laptop" screen = 5/6 --&gt; 
-	&lt;!-- "desktop" screen = 3/4 --&gt; 
-	&lt;div class="cell__unit beta-5-6 gamma-8-12 main" role="main"&gt;
+&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
+&lt;!-- "laptop" screen = 5/6 --&gt; 
+&lt;!-- "desktop" screen = 3/4 --&gt; 
+&lt;div class="cell__unit beta-5-6 gamma-8-12 main" role="main"&gt;
 
-		&lt;!-- Your awesome important content goes here --&gt;
+&lt;!-- Your awesome important content goes here --&gt;
 
-	&lt;/div&gt;
+&lt;/div&gt;
 
-	&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
-	&lt;!-- "laptop" screen = 1/6 --&gt; 
-	&lt;!-- "desktop" screen = 1/4 --&gt;
-	&lt;div class="cell__unit beta-1-6 gamma-4-12 sidebar"&gt;
+&lt;!-- "mobile" or "phablet" (eugh) screen = Full width --&gt; 
+&lt;!-- "laptop" screen = 1/6 --&gt; 
+&lt;!-- "desktop" screen = 1/4 --&gt;
+&lt;div class="cell__unit beta-1-6 gamma-4-12 sidebar"&gt;
 
-		&lt;!-- Your sidebar crap goes here --&gt;
+&lt;!-- Your sidebar crap goes here --&gt;
 
-	&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;!-- / row ends --&gt;  
@@ -80,7 +80,7 @@ title: Anatomi
 	<!-- / row ends --> 
 </div>
 
-<div class="grid-demo">
+<div class="grid-demo desk">
 
 	<h3>Desktop example 12 col default</h3>
 	
@@ -143,6 +143,106 @@ title: Anatomi
 			<div class="cell">
 				<div class="cell__unit gamma-6-12">6/12</div>
 				<div class="cell__unit gamma-6-12">6/12</div>
+			</div>
+		</div>
+	</div>
+	
+	<em>NB. The classes and number of available cols will differ for other media qs but the principle is the same.</em>
+</div>
+
+<div class="grid-demo lap">
+
+	<h3>Lap example example 6 col default</h3>
+	
+
+	<div class="cell">
+		<!-- 6 across -->
+		
+		<div class="cell__unit beta-1-6">1/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+		
+		<!--  5:1 -->
+		<div class="cell__unit beta-5-6">5/6</div>
+		<div class="cell__unit beta-1-6">1/6</div>
+
+		<!--  4:2 -->
+		<div class="cell__unit beta-4-6">4/6</div>
+		<div class="cell__unit beta-2-6">2/6</div>
+
+		<!--  3:3 -->
+		<div class="cell__unit beta-3-6">3/6</div>
+		<div class="cell__unit beta-3-6">3/6</div>
+
+
+		<!--  6:2:1 push -->		
+		<div class="cell__unit beta-2-6">2/6</div>
+		<div class="cell__unit beta-1-6 beta-push-1-6">1/6</div>
+		<div class="cell__unit beta-1-6 beta-push-1-6">1/6</div>
+
+		<!-- Nested -->
+		<!--  8:4 -->
+		<div class="cell__unit beta-4-6">4/6
+			<div class="cell">
+				<div class="cell__unit beta-6-6">6/6</div>
+				<div class="cell__unit beta-1-6 beta-push-1-6">1/6</div>
+				<div class="cell__unit beta-1-6">1/6</div>
+			</div>
+		</div>
+		<div class="cell__unit beta-2-6">2/6
+			<div class="cell">
+				<div class="cell__unit beta-3-6">3/6</div>
+				<div class="cell__unit beta-3-6">3/6</div>
+			</div>
+		</div>
+	</div>
+	
+	<em>NB. The classes and number of available cols will differ for other media qs but the principle is the same.</em>
+</div>
+
+<div class="grid-demo palmplus">
+
+	<h3>Palmplus example example 4 col default</h3>
+	
+
+	<div class="cell">
+		<!-- 4 across -->
+		
+		<div class="cell__unit alpha-1-4">1/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+		
+		<!--  5:1 -->
+		<div class="cell__unit alpha-3-4">3/4</div>
+		<div class="cell__unit alpha-1-4">1/4</div>
+
+		<!--  4:2 -->
+		<div class="cell__unit alpha-2-4">2/4</div>
+		<div class="cell__unit alpha-2-4">2/4</div>
+
+		
+		<!--  4:2:1 push -->		
+		<div class="cell__unit alpha-2-4">2/4</div>
+		<div class="cell__unit alpha-1-4 alpha-push-1-4">1/4</div>
+
+		<!-- Nested -->
+		<!--  8:4 -->
+		<div class="cell__unit alpha-3-4">3/4
+			<div class="cell">
+				<div class="cell__unit alpha-4-4">2/4</div>
+				<div class="cell__unit alpha-1-4 alpha-push-1-4">1/4</div>
+			</div>
+		</div>
+		<div class="cell__unit alpha-1-4">1/4
+			<div class="cell">
+				<div class="cell__unit alpha-2-4">2/4</div>
+				<div class="cell__unit alpha-2-4">2/4</div>
 			</div>
 		</div>
 	</div>
@@ -231,7 +331,7 @@ $bp-gamma : 60em;
 </ul>
 <h2>Thanks</h2>
 
-<p>This is basically a configurable version of the original Bootstrap scaffolding (although maybe that is configurable) and also to <a href="https://github.com/csswizardry/inuit.css/">innuit.css</a>. Also Chris Coyier's <a href="http://css-tricks.com/naming-media-queries">naming media queries post</a> for the mq generator. Thanks.</p>
+<p>This is basically a configurable version of the original Bootstrap scaffolding (although maybe that is configurable)  (although maybe that is configurable) so thanks Bootstrap. Thanks <a href="https://github.com/csswizardry/inuit.css/">innuit.css</a> which inspired me/I stole from. Also Chris Coyier's <a href="http://css-tricks.com/naming-media-queries">naming media queries post</a> for the mq generator. Thanks.</p>
 
 <h2>Disclaimer</h2>
 

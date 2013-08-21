@@ -109,7 +109,7 @@ These don't have to be your overall breakpoints (although they probably will be)
 
 ## Thanks
 
-This is basically a configurable version of the original Bootstrap scaffolding (although maybe that is configurable) and also to [innuit.css](https://github.com/csswizardry/inuit.css/). Also Chris Coyier's [naming media queries post](http://css-tricks.com/naming-media-queries) for the mq generator. Thanks.
+This is basically a configurable version of the original Bootstrap scaffolding (although maybe that is configurable) so thanks Bootstrap. Thanks [innuit.css](https://github.com/csswizardry/inuit.css/) which inspired me/I stole from. Also Chris Coyier's [naming media queries post](http://css-tricks.com/naming-media-queries) for the mq generator. Thanks.
 
 ## Disclaimer 
 Mostly this is an experiment for me to try out some intermediate Sass stuff and for use in my personal projects, mostly. I may update it. I may not. Its provided as is. If it breaks your Boss's computer, you never even heard of me, ok? 

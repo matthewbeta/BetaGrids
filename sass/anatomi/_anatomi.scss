@@ -195,25 +195,25 @@ $bp-gamma 	: 62.5em!default;
 
 	/* =============================================
 
-	  > ALPHA
+	  > BETA
 
 	==============================================*/
 	
-	@include anatomi-bp(betaalpha) {
+	@include anatomi-bp(beta) {
 
-		@for $i from 1 through ($cell-units-betaalpha - 1){
+		@for $i from 1 through ($cell-units-beta - 1){
 
 			@if $ghost-cells { 
 
-			    %beta-#{$i}-#{$cell-units-betaalpha} {
-			        @include cols($cell-units-betaalpha, $i);
+			    %beta-#{$i}-#{$cell-units-beta} {
+			        @include cols($cell-units-beta, $i);
 			    }
 
 			}
 			@else {
 
-			    .beta-#{$i}-#{$cell-units-betaalpha} {
-			        @include cols($cell-units-betaalpha, $i);
+			    .beta-#{$i}-#{$cell-units-beta} {
+			        @include cols($cell-units-beta, $i);
 			    }
 				
 			}

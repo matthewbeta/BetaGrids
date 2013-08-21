@@ -1,3 +1,4 @@
+
 $color--text : #333!default;
 $color--primary : #0DFFD8!default; 
 
@@ -27,21 +28,41 @@ body {
 	@extend .content;
 	// text-align: center;
 	padding: 2em 0 0;
-	border-bottom: 1px solid #FFF;
+	border-bottom: .25em solid #FFF;
 }
 pre {
 	padding: 2em;
 	color: $color--primary;
-	border-radius: 1em;
+	// border-radius: 1em;
 	background-color: $color--text;
-	border: 1px solid #FFF;
+	border: .25em solid #FFF;
 }
-.example {
-	border: 2px solid $color--primary;
+.grid-demo {
+	&.desk,
+	&.palmplus,
+	&.lap {
+		display: none;
+	}
 }
+@include anatomi-bp(alpha) {
+	.grid-demo.palmplus {
+		display: block;
+	}
+}
+@include anatomi-bp(beta) {
+	.grid-demo.lap {
+		display: block;
+	}
+}
+@include anatomi-bp(gamma) {
+	.grid-demo.desk {
+		display: block;
+	}
+}
+
 .footer--main {
 	padding: 2em 0;
-	border-top: 1px solid #fff;
+	border-top: .25em solid #fff;
 	p {
 
 		max-width: 40em;
