@@ -639,56 +639,83 @@ body {
   background-color: #0dffd8;
   color: #333333;
   font-size: 1.2em;
+  line-height: 1.5;
 }
 
-/* line 9, ../sass/modules/_base.scss */
+/* line 10, ../sass/modules/_base.scss */
 .wrap {
   border-top: 2em solid #333;
 }
 
-/* line 12, ../sass/modules/_base.scss */
+/* line 13, ../sass/modules/_base.scss */
 .content--main {
-  padding: 2em 0;
+  padding: 0 0 2em;
 }
 
-/* line 15, ../sass/modules/_base.scss */
+/* line 16, ../sass/modules/_base.scss */
 .content, .header--main {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 19, ../sass/modules/_base.scss */
+/* line 20, ../sass/modules/_base.scss */
 .main-image {
-  max-width: 200px;
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
-/* line 22, ../sass/modules/_base.scss */
+/* line 25, ../sass/modules/_base.scss */
 .header--main {
-  text-align: center;
   padding: 2em 0 0;
+  border-bottom: 1px solid #FFF;
 }
 
-/* line 27, ../sass/modules/_base.scss */
+/* line 31, ../sass/modules/_base.scss */
 pre {
   padding: 2em;
   color: #0dffd8;
   border-radius: 1em;
   background-color: #333333;
+  border: 1px solid #FFF;
 }
 
-/* line 33, ../sass/modules/_base.scss */
+/* line 38, ../sass/modules/_base.scss */
 .example {
   border: 2px solid #0dffd8;
 }
 
-/* line 36, ../sass/modules/_base.scss */
+/* line 41, ../sass/modules/_base.scss */
 .footer--main {
   padding: 2em 0;
+  border-top: 1px solid #fff;
 }
-/* line 38, ../sass/modules/_base.scss */
+/* line 44, ../sass/modules/_base.scss */
 .footer--main p {
   max-width: 40em;
   margin: 0 auto;
+}
+
+/* line 50, ../sass/modules/_base.scss */
+.code-header {
+  padding-top: .5em;
+  margin-bottom: 0;
+  font-size: 1em;
+  border-top: 1px solid #fff;
+}
+
+/* line 58, ../sass/modules/_base.scss */
+.grid-demo .cell__unit {
+  min-height: 1em;
+  background: #333333;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #FFF;
+}
+/* line 65, ../sass/modules/_base.scss */
+.grid-demo .cell__unit .cell__unit {
+  background: #FFF;
+  color: #333333;
 }
 
 /* line 1, ../sass/modules/_github-pygments.scss */

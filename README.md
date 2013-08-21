@@ -2,7 +2,7 @@
 
 ## PROJECT PAGES COMING SOON 
 
-## A configurable, equal width, SCSS grid generator
+## A  bare-bones SCSS grid generator for atomic design
 
 This is another grid generator for building grid systems. Using it is fairly straigfhtforward, just add your own values to the <pre>sass/modules/_config.scss</pre> and recompile the styles.scss.
 

@@ -8,7 +8,7 @@ title: Anatomi
 
 	<h1>ANATOMI</h1>
 
-	<h2>A configurable, equal width, SCSS grid generator</h2>
+	<h2>A bare-bones SCSS grid generator for atomic design</h2>
 
 </header>
 
@@ -24,7 +24,7 @@ title: Anatomi
 
 <p>Out of the box, you can have a sweet, mobile first repsonsive grid. Below is a quick example of a standard main column and a sidebar layout:</p>
 
-<h3>Your markup</h3>
+<h3 class="code-header">Your markup</h3>
 
 <pre>
 <code>
@@ -54,30 +54,100 @@ title: Anatomi
 </code>
 </pre>
 
-<div class="example">
+<div class="grid-demo">
 	<!-- Your grid row -->
-<div class="cell">
+	<div class="cell">
 
-	<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
-	<!-- "laptop" screen = 5/6 --> 
-	<!-- "desktop" screen = 3/4 --> 
-	<div class="cell__unit beta-5-6 gamma-8-12 main" role="main">
+		<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+		<!-- "laptop" screen = 5/6 --> 
+		<!-- "desktop" screen = 3/4 --> 
+		<div class="cell__unit beta-5-6 gamma-8-12 main" role="main">
 
-		<p>Your awesome important content goes here</p>
+			<p>Your awesome important content goes here</p>
+
+		</div>
+
+		<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
+		<!-- "laptop" screen = 1/6 --> 
+		<!-- "desktop" screen = 1/4 -->
+		<div class="cell__unit beta-1-6 gamma-4-12 sidebar">
+
+			<p>Your sidebar crap goes here</p>
+
+		</div>
 
 	</div>
-
-	<!-- "mobile" or "phablet" (eugh) screen = Full width --> 
-	<!-- "laptop" screen = 1/6 --> 
-	<!-- "desktop" screen = 1/4 -->
-	<div class="cell__unit beta-1-6 gamma-4-12 sidebar">
-
-		<p>Your sidebar crap goes here</p>
-
-	</div>
-
+	<!-- / row ends --> 
 </div>
-<!-- / row ends --> 
+
+<div class="grid-demo">
+
+	<h3>Desktop example 12 col default</h3>
+	
+
+	<div class="cell">
+		<!-- 12 across -->
+
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+		
+		<!--  11:1 -->
+		<div class="cell__unit gamma-11-12">11/12</div>
+		<div class="cell__unit gamma-1-12">1/12</div>
+
+		<!--  10:2 -->
+		<div class="cell__unit gamma-10-12">10/12</div>
+		<div class="cell__unit gamma-2-12">2/12</div>
+
+		<!--  9:3 -->
+		<div class="cell__unit gamma-9-12">9/12</div>
+		<div class="cell__unit gamma-3-12">3/12</div>
+
+		<!--  8:4 -->
+		<div class="cell__unit gamma-8-12">8/12</div>
+		<div class="cell__unit gamma-4-12">4/12</div>
+
+		<!--  7:5 -->
+		<div class="cell__unit gamma-7-12">7/12</div>
+		<div class="cell__unit gamma-5-12">5/12</div>
+
+		<!--  6:6 -->
+		<div class="cell__unit gamma-6-12">6/12</div>
+		<div class="cell__unit gamma-6-12">6/12</div>
+
+		<!--  6:2:1 push -->		
+		<div class="cell__unit gamma-6-12">6/12</div>
+		<div class="cell__unit gamma-2-12 gamma-push-2-12">2/12</div>
+		<div class="cell__unit gamma-1-12 gamma-push-1-12">1/12</div>
+
+		<!-- Nested -->
+		<!--  8:4 -->
+		<div class="cell__unit gamma-8-12">8/12
+			<div class="cell">
+				<div class="cell__unit gamma-6-12">6/12</div>
+				<div class="cell__unit gamma-2-12 gamma-push-2-12">2/12</div>
+				<div class="cell__unit gamma-2-12">2/12</div>
+			</div>
+		</div>
+		<div class="cell__unit gamma-4-12">4/12
+			<div class="cell">
+				<div class="cell__unit gamma-6-12">6/12</div>
+				<div class="cell__unit gamma-6-12">6/12</div>
+			</div>
+		</div>
+	</div>
+	
+	<em>NB. The classes and number of available cols will differ for other media qs but the principle is the same.</em>
 </div>
 
 <h2>OK, but what can I configure</h2>
@@ -87,7 +157,7 @@ title: Anatomi
 <p>This will enable the use of Sass' silent classes. This basically means you can have all the sexy grid-ness without all the dirty class names in your HTML.
 Mr <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a> can explain this much better than me</p>
 
-<h4>Sass</h4>
+<h4 class="code-header">Sass</h4>
 
 <pre>
 <code>
@@ -103,7 +173,9 @@ $ghost-grids : true; //default = false
 </code>
 </pre>
 
-<h4>Compiled CSS</h4>
+
+
+<h4 class="code-header">Compiled CSS</h4>
 
 <pre><code>
 .wrap {
