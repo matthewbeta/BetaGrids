@@ -16,11 +16,10 @@ $strict-normalize: true !default;
 }
 @viewport{
     width: device-width;
+}
 
 // The default font family.
 @import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic);
-
-}
 
 $base-font-family: 'Lekton', sans-serif !default;
 
